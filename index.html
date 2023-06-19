@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js"></script>
+    <title>Night Owl Sign-up Form</title>
+  </head>
+  <body>
+    <div class="side-content">
+      <div class="logo">
+        <img src="images/night owl.jpg" alt="night owl logo" />
+        <h1>Night Owl</h1>
+      </div>
+      <p>
+        Photo by
+        <a href="https://unsplash.com/@solenfeyissa">Solen Feyissa</a> on
+        <a href="https://unsplash.com/photos/YurfSgNT2Z0">Unsplash</a>
+      </p>
+    </div>
+    <main class="main-content">
+      <div class="introduction">
+        <h2>
+          Welcome to the Night Owl! Here, you will meet a society of night
+          owlers who share a lifestyle similar to yours and help you realize
+          your daydreams. <br />
+          Sign up <em>now</em> to get started
+        </h2>
+        <h2><em>Achieve</em> your desires.</h2>
+      </div>
+      <form class="form" onsubmit="validateForm(event)">
+        <div class="form-body">
+          <h2>Let's sign you up!</h2>
+          <div class="form-data">
+            <div class="input-wrapper">
+              <label for="first-name">FIRST NAME</label>
+              <input type="text" name="first-name" id="first-name" required />
+            </div>
+            <div class="input-wrapper">
+              <label for="last-name">LAST NAME</label>
+              <input type="text" name="last-name" id="last-name" required />
+            </div>
+            <div class="input-wrapper">
+              <label for="email">EMAIL</label>
+              <input type="email" name="email" id="email" required />
+            </div>
+            <div class="input-wrapper">
+              <label for="phone-number">PHONE NUMBER</label>
+              <input
+                type="tel"
+                name="phone-number"
+                id="phone-number"
+                pattern="[0-9]+"
+                title="Please enter numbers only"
+                required
+              />
+            </div>
+            <div class="input-wrapper">
+              <label for="password">PASSWORD</label>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                required
+                oninput="validatePassword(this)"
+                onchange="validatePassword(this)"
+              />
+              <span id="password-validation-message"></span>
+            </div>
+
+            <div class="input-wrapper">
+              <label for="confirm-password">CONFIRM PASSWORD</label>
+              <input
+                type="password"
+                name="confirm-password"
+                id="confirm-password"
+                required
+              />
+            </div>
+          </div>
+        </div>
+        <button type="submit" onsubmit="validateForm(e)">Create Account</button>
+      </form>
+
+      <p class="login-link">Already have an account? <a href="">Log in</a></p>
+    </main>
+  </body>
+</html>
